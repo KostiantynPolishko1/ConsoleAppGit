@@ -6,6 +6,8 @@
         {
             Person person = new Person();
             Console.WriteLine(person);
+
+            Employer employer = new Employer();
         }
     }
 }

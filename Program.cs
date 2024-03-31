@@ -8,6 +8,7 @@
             Console.WriteLine(person);
 
             Employer employer = new Employer();
+            Console.WriteLine(employer);
         }
     }
 }

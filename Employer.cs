@@ -11,12 +11,14 @@ namespace ConsoleAppGit
         public string? name { get; private set; }
         public int salary { get; private set; }
 
-        public Employer() : base() { }
+        public Employer() : base() { name = "unknown"; salary = 10; }
 
-        public Employer(string name, int salary, int age, string? sex) : base(salary, sex)
+        public Employer(string? name, int salary, int age, string? sex) : base(salary, sex)
         {
-            this.name = name;
+            this.name = name??= "unknown";
             this.salary = salary;
         }
+
+        public override string ToString() => $"{name} - {salary} | " + base.ToString();
     }
 }
